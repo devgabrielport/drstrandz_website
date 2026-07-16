@@ -343,6 +343,65 @@ footer{ background:var(--panel-2); border-top:1px solid var(--hairline); padding
 /* reveal on scroll */
 .reveal{ opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease; }
 .reveal.in{ opacity:1; transform:translateY(0); }
+
+/* ============ MOBILE HARDENING ============ */
+@media (max-width:760px){
+  .wrap{ padding:0 20px; }
+  section{ padding:76px 0; }
+  .section-head{ margin-bottom:40px; }
+  .navbar{ padding:12px 20px; }
+  .brand-name{ font-size:17px; }
+  .brand img{ height:32px; width:32px; }
+  .hero{ padding:110px 0 60px; }
+  .hero-copy p.lede{ font-size:15.5px; }
+  .hero-actions{ flex-direction:column; align-items:stretch; }
+  .hero-actions .btn{ width:100%; }
+  .hero-trust{ gap:18px; margin-top:34px; }
+  .hero-trust div{ flex:1 1 40%; padding-left:12px; }
+  .hero-trust strong{ font-size:21px; }
+  .hero-frame img{ height:260px; }
+  .hero-tag{ left:14px; bottom:14px; max-width:calc(100% - 28px); padding:12px 14px; }
+  .badge-panel{ padding:22px; }
+  .badge-grid{ gap:14px; }
+  .badge{ padding:16px 8px; }
+  .about-copy p{ max-width:100%; }
+  .credential-item h4{ font-size:13.5px; }
+  .service-row{ padding:26px 0; }
+  .service-body h3{ font-size:21px; }
+  .reviews-top{ align-items:flex-start; }
+  .google-summary{ flex-wrap:wrap; gap:10px; }
+  .google-summary .score{ font-size:40px; }
+  .review-card{ padding:22px; }
+  .booking-copy .btn{ width:100%; }
+  .calendly-frame-wrap{ min-height:560px; }
+  .calendly-frame-wrap iframe{ height:560px !important; }
+  form.consult-form{ padding:22px; }
+  .field label{ font-size:11px; }
+  .radio-group{ gap:16px; }
+  .form-submit{ flex-direction:column; align-items:stretch; }
+  .form-submit .btn{ width:100%; text-align:center; }
+  .faq-q h4{ font-size:17px; }
+  .faq-q{ padding:20px 0; gap:14px; }
+  .final-cta{ padding:90px 0; }
+  .final-cta .btn-row{ flex-direction:column; }
+  .final-cta .btn-row .btn{ width:100%; }
+  footer{ padding:56px 0 24px; }
+  .footer-grid{ gap:36px; }
+  .footer-bottom{ flex-direction:column; align-items:flex-start; gap:8px; }
+}
+
+@media (max-width:400px){
+  .wrap{ padding:0 16px; }
+  .hero-copy h1{ font-size:34px; }
+  .eyebrow{ font-size:10.5px; letter-spacing:0.24em; }
+  .hero-trust div{ flex:1 1 100%; border-left:none; border-top:1px solid var(--hairline); padding:10px 0 0; }
+  .btn{ padding:13px 18px; }
+  .service-medallion{ width:84px; height:84px; }
+}
+
+/* prevent any accidental horizontal scroll on small screens */
+img, iframe, svg{ max-width:100%; }
+.wrap, .hero-grid, .service-row, .about-grid, .booking-grid, .consult-shell, .footer-grid{ min-width:0; }
 </style>
 </head>
 <body>
